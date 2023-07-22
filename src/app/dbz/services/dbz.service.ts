@@ -26,13 +26,13 @@ export class DbzService {
   }]
 
 
-  public onNewCharacter(character: Character): void {
+  public addCharacter(character: Character): void {
     const newCharacter: Character = {...character, id : uuid() }
 
     this.characters.push(newCharacter)
   }
 
-  public onDeleteCharacter(id:string): void{
+  public onDeleteCharacterById(id:string): void{
     this.characters = this.characters.filter( character => character.id != id)
   }
 
